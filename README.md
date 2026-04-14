@@ -1,4 +1,4 @@
-# effiPrecision: High-Fidelity Performance Metrology Dashbaord
+# effiPrecision: High-Fidelity Performance Metrology Dashboard
 
 **effiPrecision** is a premium, professional-grade technical inspection instrument designed for modern HR and performance management. It moves beyond traditional "soft" metrics into the realm of **behavioral metrology**, applying engineering principles such as GD&T (Geometric Dimensioning and Tolerancing) and SPC (Statistical Process Control) to human performance data.
 
