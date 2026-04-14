@@ -19,43 +19,37 @@
 
 ## 📦 Installation & Setup
 
-### Prerequisites
-- Python 3.9+
-- Node.js 18+
+### 1. Environment Configuration
+Ensure you have a `.env` file in the root with the necessary API keys (OpenAI/Gemini, etc.).
+```env
+OPENAI_API_KEY=your_key_here
+```
 
-### Backend Setup
-1. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-2. Install dependencies (if requirements.txt exists):
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the API:
-   ```bash
-   python api.py
-   ```
+### 2. Backend Setup
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python api.py
+```
 
-### Frontend Setup
-1. Navigate to the web-ui directory:
-   ```bash
-   cd web-ui
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+### 3. Frontend Setup
+```bash
+cd web-ui
+npm install
+npm run dev
+```
+
+## 🎥 Showcase & Presentation
+*Judges: Please refer to the presentation materials for the full narrative breakdown of the EffiPrecision system.*
+
+- **Technical Presentation**: [Link to Slides/Video if available]
+- **Architecture**: The system uses a multi-agent "Council" graph to reconcile performance data from disparate sources.
 
 ## 🎯 Hackathon Highlights
-- **Innovation**: Applying 3D manufacturing metrology standards to HR analytics.
-- **User Experience**: A non-standard, "agentic" interface designed for high-stakes decision-making.
-- **Scalability**: Designed for deep integration with engineering ecosystems.
+- **Innovation**: Applying 3D manufacturing metrology standards (GD&T) to HR analytics.
+- **User Experience**: A premium, "agentic" interface designed for high-stakes decision-making.
+- **Scalability**: Designed for deep integration with engineering ecosystems like Jira and GitHub.
 
 ---
 *Developed for APOGEE 2026 - Engineering the Future of Work.*
