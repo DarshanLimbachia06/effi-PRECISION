@@ -168,7 +168,7 @@ export default function App() {
     { subject: 'Sensor C (Ambient)',   A: fused.sensor_c_score || (isAditya ? 94 : isRiya ? 21 : (evalData ? 55 : 0)) },
   ];
   const velocityTrend = (jiraEv.sprint_velocity_trend || (evalData ? [10, 10, 10, 10, 10, 10, 10] : [0, 0, 0, 0, 0, 0, 0])).map((v, i) => ({ w: `W${i + 1}`, v }));
-  const goals = hrmsEv.goals || [];
+  const goals = hrmsEv.goals_detail || [];
 
   const humanScrap = Math.round(roiHeadcount * (roiAttrition / 100) * 0.20);
   const scrapCost  = Math.round(humanScrap * 10);
