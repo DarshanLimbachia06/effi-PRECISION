@@ -52,4 +52,9 @@ npm run dev
 - **Scalability**: Designed for deep integration with engineering ecosystems like Jira and GitHub.
 
 ---
+
+## 👨‍💻 Team: Data Dynamos
+- **Team Leader:** Kasubosula Susmitha
+- **Team Member:** Darshan Kapil Limbachia
+
 *Developed for APOGEE 2026 - Engineering the Future of Work.*
