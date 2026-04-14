@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>effiAgent | Intelligent Performance Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0053db",
+                        "surface": "#f8fafc",
+                        "surface-container": "#ffffff",
+                        "on-surface": "#0f172a",
+                        "outline-variant": "#e2e8f0"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .professional-shadow {
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        }
+        .ai-glow {
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.1);
+        }
+        .radar-grid {
+            background-image: radial-gradient(circle, #cbd5e1 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .sparkline-gradient {
+            background: linear-gradient(90deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased selection:bg-primary/10">
+<!-- Navigation -->
+<nav class="bg-slate-900/95 backdrop-blur-md sticky top-0 z-50 h-14 w-full flex items-center px-6 border-b border-white/5">
+<div class="flex items-center gap-3 mr-12">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl" data-icon="insights">insights</span>
+</div>
+<span class="text-white font-bold tracking-tight text-lg">effiAgent</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="text-white text-sm font-medium relative py-4" href="#">
+            Overview
+            <div class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></div>
+</a>
+<a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#">Performance Network</a>
+<a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#">HR Orchestrator</a>
+</div>
+<div class="ml-auto flex items-center gap-4">
+<!-- Command Palette Indicator -->
+<div class="hidden md:flex items-center bg-slate-800/50 border border-slate-700/50 rounded-lg px-3 py-1.5 gap-3 group cursor-pointer hover:bg-slate-800 transition-all">
+<span class="material-symbols-outlined text-slate-500 text-sm" data-icon="search">search</span>
+<span class="text-slate-400 text-xs">Search metrics...</span>
+<div class="flex items-center gap-1">
+<kbd class="bg-slate-700 text-slate-300 text-[10px] px-1.5 py-0.5 rounded border border-slate-600 font-mono">⌘</kbd>
+<kbd class="bg-slate-700 text-slate-300 text-[10px] px-1.5 py-0.5 rounded border border-slate-600 font-mono">K</kbd>
+</div>
+</div>
+<button class="material-symbols-outlined text-slate-400 hover:text-white transition-colors" data-icon="notifications">notifications</button>
+<div class="h-8 w-8 rounded-full border border-white/10 overflow-hidden ring-2 ring-slate-800">
+<img alt="User avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcrz5_FkPeFVVL7f_J4Q77ShRmGDev9ypoAQ2XHxBsnGpSjAk3zQnHPzx8hAVZwiRPxH9aSVWKV3Zz7NhpbaDwtCTtc-ylRVPsXDThlvzEsG0mmFpafzHfzN6ZDUoJeLuzwxgrazDqEBLl3Wqxg168jcWh1tNKujijIzmryBLwoR8I2BytvbQJ49w7346YF7tE23MOPSL1K360DQ9TMDiD407jM9TdUocCjX5yJpPUHlAF4P4V5lguw11Thgsd_FlkEhn0cbZ9OIle"/>
+</div>
+</div>
+</nav>
+<!-- Breadcrumb Strip -->
+<div class="bg-white/80 backdrop-blur border-b border-slate-200 h-10 px-6 flex items-center sticky top-14 z-40">
+<div class="flex items-center gap-2 text-xs font-medium text-slate-500">
+<span class="text-emerald-600 flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+            effiPrecision: Live
+        </span>
+<span class="material-symbols-outlined text-slate-300 text-base" data-icon="chevron_right">chevron_right</span>
+<div class="flex items-center gap-1 text-slate-900 group cursor-pointer">
+<span>Aditya Sharma</span>
+<span class="material-symbols-outlined text-base group-hover:translate-y-0.5 transition-transform" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="ml-auto flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Syncing: 4s ago</a>
+<button class="bg-slate-900 text-white px-3 py-1 rounded text-[10px] hover:bg-slate-800 transition-colors">View Profile</button>
+</div>
+</div>
+<main class="max-w-[1400px] mx-auto p-8 grid grid-cols-12 gap-8">
+<!-- Left Section -->
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<!-- Integrated Alert -->
+<section class="relative overflow-hidden bg-white rounded-2xl border border-amber-200/50 professional-shadow">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-amber-400"></div>
+<div class="p-5 flex items-start gap-4">
+<div class="bg-amber-50 p-2 rounded-xl">
+<span class="material-symbols-outlined text-amber-600 text-xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<h3 class="font-bold text-slate-900 text-sm tracking-tight">Invisible Work Detector</h3>
+<span class="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-100 uppercase">High Contribution Found</span>
+</div>
+<p class="text-slate-600 text-sm mt-1 leading-relaxed">
+                        9 peer references detected for <span class="font-semibold text-slate-900">API migration documentation</span>. This implicit impact is currently being weighted for your Q4 appraisal.
+                    </p>
+<div class="mt-3 flex items-center gap-4">
+<a class="text-amber-700 text-xs font-bold hover:underline flex items-center gap-1" href="#">
+                            View Evidence
+                            <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</a>
+<button class="text-slate-400 text-xs font-medium hover:text-slate-600 transition-colors">Dismiss</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Metric Cards with Sparklines -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Metric Card 1 -->
+<div class="glass-card rounded-2xl p-6 professional-shadow group transition-all hover:border-primary/30">
+<div class="flex justify-between items-start mb-1">
+<span class="text-slate-500 text-[11px] font-bold uppercase tracking-widest">Ticket Throughput</span>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-lg" data-icon="confirmation_number">confirmation_number</span>
+</div>
+<div class="flex items-end gap-3">
+<span class="text-3xl font-bold text-slate-900 tracking-tight">19</span>
+<div class="flex items-center text-emerald-600 font-bold text-xs mb-1 gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span>
+<span>+22.5%</span>
+</div>
+</div>
+<!-- Mini Sparkline Placeholder -->
+<div class="mt-4 h-10 w-full flex items-end gap-0.5">
+<div class="flex-1 bg-slate-100 rounded-t-sm h-[40%]" title="Day 1"></div>
+<div class="flex-1 bg-slate-100 rounded-t-sm h-[60%]" title="Day 2"></div>
+<div class="flex-1 bg-slate-100 rounded-t-sm h-[35%]" title="Day 3"></div>
+<div class="flex-1 bg-slate-200 rounded-t-sm h-[80%]" title="Day 4"></div>
+<div class="flex-1 bg-slate-100 rounded-t-sm h-[50%]" title="Day 5"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[90%]" title="Day 6"></div>
+<div class="flex-1 bg-primary rounded-t-sm h-[100%]" title="Today"></div>
+</div>
+</div>
+<!-- Metric Card 2 -->
+<div class="glass-card rounded-2xl p-6 professional-shadow group transition-all hover:border-primary/30">
+<div class="flex justify-between items-start mb-1">
+<span class="text-slate-500 text-[11px] font-bold uppercase tracking-widest">PR Reviews Given</span>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-lg" data-icon="checklist">checklist</span>
+</div>
+<div class="flex items-end gap-3">
+<span class="text-3xl font-bold text-slate-900 tracking-tight">32</span>
+<div class="flex items-center text-emerald-600 font-bold text-xs mb-1 gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span>
+<span>+8.4%</span>
+</div>
+</div>
+<!-- Mini Sparkline Placeholder -->
+<div class="mt-4 h-10 w-full flex items-end gap-0.5">
+<div class="flex-1 bg-slate-100 rounded-t-sm h-[70%]" title="Day 1"></div>
+<div class="flex-1 bg-slate-200 rounded-t-sm h-[50%]" title="Day 2"></div>
+<div class="flex-1 bg-slate-100 rounded-t-sm h-[90%]" title="Day 3"></div>
+<div class="flex-1 bg-slate-100 rounded-t-sm h-[60%]" title="Day 4"></div>
+<div class="flex-1 bg-slate-200 rounded-t-sm h-[40%]" title="Day 5"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[85%]" title="Day 6"></div>
+<div class="flex-1 bg-primary rounded-t-sm h-[75%]" title="Today"></div>
+</div>
+</div>
+</div>
+<!-- Telemetry Chart Section -->
+<section class="glass-card rounded-2xl p-8 professional-shadow">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
+<div>
+<h2 class="text-lg font-bold text-slate-900 tracking-tight">Telemetry Analytics</h2>
+<p class="text-slate-500 text-xs mt-0.5">Benchmarking output density against collaboration frequency</p>
+</div>
+<div class="flex items-center gap-3">
+<select class="bg-slate-50 border-slate-200 text-slate-600 text-[11px] font-bold uppercase tracking-wider rounded-lg px-3 py-1.5 focus:ring-primary/20 focus:border-primary transition-all">
+<option>Last 30 Days</option>
+<option>Quarter to Date (Q3)</option>
+<option>Fiscal Year</option>
+</select>
+<div class="h-4 w-px bg-slate-200 mx-1"></div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 bg-primary rounded-full"></div>
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-tight">Output</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 bg-slate-300 rounded-full"></div>
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-tight">Collab</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Enhanced Chart Simulation -->
+<div class="relative h-64 w-full flex items-end justify-between gap-12 group/chart">
+<!-- Chart Tooltip Simulation (Hidden by default, shown on hover of a column) -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] px-3 py-2 rounded-lg opacity-0 group-hover/chart:opacity-100 transition-opacity pointer-events-none flex flex-col gap-1 professional-shadow z-10 border border-white/10">
+<div class="font-bold border-b border-white/10 pb-1 mb-1">Week 3 Details</div>
+<div class="flex justify-between gap-4"><span>Output:</span><span class="text-primary font-bold">88.4</span></div>
+<div class="flex justify-between gap-4"><span>Collab:</span><span class="text-slate-400 font-bold">62.1</span></div>
+</div>
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none">
+<div class="border-t border-slate-100 w-full h-px"></div>
+<div class="border-t border-slate-100 w-full h-px"></div>
+<div class="border-t border-slate-100 w-full h-px"></div>
+<div class="border-t border-slate-100 w-full h-px"></div>
+<div class="border-t border-slate-200 w-full h-px"></div>
+</div>
+<!-- Week 1 -->
+<div class="relative flex-1 flex flex-col items-center gap-3">
+<div class="w-full flex items-end justify-center gap-2 h-full">
+<div class="w-7 bg-gradient-to-t from-primary to-blue-400 rounded-t-md hover:brightness-110 transition-all cursor-pointer" style="height: 60%"></div>
+<div class="w-7 bg-slate-200 rounded-t-md hover:bg-slate-300 transition-all cursor-pointer" style="height: 40%"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">W1</span>
+</div>
+<!-- Week 2 -->
+<div class="relative flex-1 flex flex-col items-center gap-3">
+<div class="w-full flex items-end justify-center gap-2 h-full">
+<div class="w-7 bg-gradient-to-t from-primary to-blue-400 rounded-t-md hover:brightness-110 transition-all cursor-pointer" style="height: 85%"></div>
+<div class="w-7 bg-slate-200 rounded-t-md hover:bg-slate-300 transition-all cursor-pointer" style="height: 55%"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">W2</span>
+</div>
+<!-- Week 3 -->
+<div class="relative flex-1 flex flex-col items-center gap-3">
+<div class="w-full flex items-end justify-center gap-2 h-full">
+<div class="w-7 bg-gradient-to-t from-primary to-blue-400 rounded-t-md hover:brightness-110 transition-all cursor-pointer" style="height: 70%"></div>
+<div class="w-7 bg-slate-200 rounded-t-md hover:bg-slate-300 transition-all cursor-pointer" style="height: 90%"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">W3</span>
+</div>
+<!-- Week 4 -->
+<div class="relative flex-1 flex flex-col items-center gap-3">
+<div class="w-full flex items-end justify-center gap-2 h-full">
+<div class="w-7 bg-gradient-to-t from-primary to-blue-400 rounded-t-md hover:brightness-110 transition-all cursor-pointer" style="height: 95%"></div>
+<div class="w-7 bg-slate-200 rounded-t-md hover:bg-slate-300 transition-all cursor-pointer" style="height: 75%"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">W4</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Section -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Precision PIC Radar -->
+<section class="glass-card rounded-2xl p-6 professional-shadow">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h2 class="text-slate-500 text-[11px] font-bold uppercase tracking-widest">Precision Profile</h2>
+<p class="text-slate-900 text-lg font-bold">OPS 4.2 <span class="text-slate-400 font-normal">/ 5.0</span></p>
+</div>
+<div class="p-2 bg-slate-50 rounded-lg border border-slate-100">
+<span class="material-symbols-outlined text-slate-400" data-icon="share">share</span>
+</div>
+</div>
+<div class="relative w-full aspect-square flex items-center justify-center radar-grid rounded-full border border-slate-100 p-8">
+<!-- SVG Radar -->
+<svg class="w-full h-full drop-shadow-sm" viewbox="0 0 200 200">
+<circle cx="100" cy="100" fill="none" r="80" stroke="#f1f5f9" stroke-width="1"></circle>
+<circle cx="100" cy="100" fill="none" r="60" stroke="#f1f5f9" stroke-width="1"></circle>
+<circle cx="100" cy="100" fill="none" r="40" stroke="#f1f5f9" stroke-width="1"></circle>
+<!-- Axis Lines -->
+<line stroke="#f1f5f9" stroke-width="1" x1="100" x2="100" y1="20" y2="180"></line>
+<line stroke="#f1f5f9" stroke-width="1" x1="20" x2="180" y1="100" y2="100"></line>
+<polygon class="fill-primary/10 stroke-primary stroke-[2px]" points="100,40 170,80 140,150 60,150 30,80"></polygon>
+<!-- Data Points -->
+<circle class="fill-primary" cx="100" cy="40" r="3"></circle>
+<circle class="fill-primary" cx="170" cy="80" r="3"></circle>
+<circle class="fill-primary" cx="140" cy="150" r="3"></circle>
+<circle class="fill-primary" cx="60" cy="150" r="3"></circle>
+<circle class="fill-primary" cx="30" cy="80" r="3"></circle>
+</svg>
+<!-- Labels -->
+<div class="absolute top-2 text-[8px] font-bold uppercase text-slate-400 tracking-tighter">Output Volume</div>
+<div class="absolute right-2 top-1/2 -translate-y-1/2 text-[8px] font-bold uppercase text-slate-400 text-right w-12 leading-none">Reliability</div>
+<div class="absolute bottom-2 right-12 text-[8px] font-bold uppercase text-slate-400">Collaboration</div>
+<div class="absolute bottom-2 left-12 text-[8px] font-bold uppercase text-slate-400">Knowledge</div>
+<div class="absolute left-2 top-1/2 -translate-y-1/2 text-[8px] font-bold uppercase text-slate-400 text-left w-12 leading-none">Gage R&amp;R</div>
+</div>
+</section>
+<!-- AI Review Draft Engine -->
+<section class="bg-slate-900 rounded-2xl p-6 border border-slate-800 ai-glow relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-8xl text-primary" data-icon="bolt">bolt</span>
+</div>
+<div class="flex justify-between items-center mb-6">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="text-white font-bold text-xs uppercase tracking-widest">Review Draft Engine</h2>
+<span class="flex items-center gap-1 text-[9px] bg-primary/20 text-blue-400 px-1.5 py-0.5 rounded border border-primary/30 font-bold uppercase">
+<span class="w-1 h-1 bg-blue-400 rounded-full animate-pulse"></span>
+                            AI Generated
+                        </span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-slate-500 text-[10px]">v4.2-neural</span>
+<span class="text-slate-700">•</span>
+<span class="text-slate-500 text-[10px]">Updated: 2m ago</span>
+</div>
+</div>
+<div class="text-right">
+<span class="bg-red-500/10 text-red-400 text-[9px] font-bold px-2 py-1 rounded border border-red-500/20">±1.2σ Bias Drift</span>
+</div>
+</div>
+<div class="font-mono text-[12px] space-y-3 leading-relaxed">
+<div class="flex gap-3">
+<span class="text-slate-600 select-none">01</span>
+<span class="text-emerald-400">[READY] Subject: Aditya Sharma</span>
+</div>
+<div class="flex gap-3">
+<span class="text-slate-600 select-none">02</span>
+<span class="text-slate-300">Resolved a critical P1 bug (Payment Gateway) 3 days ahead of cycle estimate. 
+                        <a class="text-primary hover:underline text-[10px] ml-1 opacity-60" href="#">[Ref: Jira-482]</a>
+</span>
+</div>
+<div class="flex gap-3">
+<span class="text-slate-600 select-none">03</span>
+<span class="text-slate-300">High integration with mentorship programs verified via architecture linkages.
+                        <a class="text-primary hover:underline text-[10px] ml-1 opacity-60" href="#">[Ref: Conf-99]</a>
+</span>
+</div>
+<div class="flex gap-3">
+<span class="text-slate-600 select-none">04</span>
+<span class="text-primary animate-pulse font-bold">_ Thinking...</span>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+<div class="flex gap-2">
+<button class="bg-slate-800 hover:bg-slate-700 text-slate-300 p-2 rounded-lg transition-colors border border-slate-700" title="Copy to clipboard">
+<span class="material-symbols-outlined text-sm" data-icon="content_copy">content_copy</span>
+</button>
+<button class="bg-slate-800 hover:bg-slate-700 text-slate-300 p-2 rounded-lg transition-colors border border-slate-700" title="Refine Draft">
+<span class="material-symbols-outlined text-sm" data-icon="refresh">refresh</span>
+</button>
+</div>
+<button class="bg-primary text-white px-5 py-2 rounded-lg text-[11px] font-bold uppercase tracking-wider hover:brightness-110 active:scale-95 transition-all professional-shadow">
+                    Commit to HRIS
+                </button>
+</div>
+</section>
+<!-- Status Card -->
+<div class="bg-white rounded-2xl border border-slate-200 p-4 flex items-center justify-between professional-shadow">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
+<div class="absolute inset-0 w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping opacity-25"></div>
+</div>
+<span class="text-[11px] font-bold uppercase tracking-widest text-slate-500">System: Deep Sync Active</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-mono text-slate-400">Ver 0.9.4.1</span>
+<span class="material-symbols-outlined text-slate-300 text-sm" data-icon="info">info</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Intelligence Assistant FAB -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="group relative flex items-center justify-center">
+<div class="absolute inset-0 bg-primary rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+<div class="bg-slate-900 text-white w-14 h-14 rounded-full professional-shadow flex items-center justify-center relative hover:scale-110 active:scale-95 transition-all border border-white/10">
+<span class="material-symbols-outlined text-2xl group-hover:rotate-[15deg] transition-transform" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<!-- Tooltip Label -->
+<span class="absolute right-full mr-4 bg-slate-900 text-white text-[10px] font-bold uppercase tracking-wider py-1.5 px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-white/10 pointer-events-none">Intelligence Assist</span>
+</button>
+</div>
+</body></html>

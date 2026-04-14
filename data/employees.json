@@ -1,0 +1,113 @@
+[
+  {
+    "name": "Aditya Sharma",
+    "email": "aditya@effihr.mock",
+    "role": "Senior Engineer",
+    "department": "Engineering",
+    "employee_id": "EMP-001",
+    "manager": "priya@effihr.mock",
+    "hire_date": "2022-03-15",
+    "grade": "L5",
+    "location": "Bangalore",
+    "hrms": {
+      "current_cycle_goal_completion_pct": 91,
+      "manager_draft_rating": 3,
+      "self_rating": 4,
+      "past_cycles": [
+        { "cycle": "Q4 2024", "final_rating": 4, "percentile": 88 },
+        { "cycle": "Q3 2024", "final_rating": 4, "percentile": 85 },
+        { "cycle": "Q2 2024", "final_rating": 3, "percentile": 70 }
+      ],
+      "attendance_pct": 98.2,
+      "unplanned_leaves": 1,
+      "goals": [
+        { "id": "G-01", "title": "Migrate Payment Gateway to v2 API", "weight": 40, "completion": 100, "status": "Completed" },
+        { "id": "G-02", "title": "Reduce P1 Bug Resolution Time by 15%", "weight": 30, "completion": 85, "status": "In Progress" },
+        { "id": "G-03", "title": "Onboard 2 junior engineers", "weight": 30, "completion": 90, "status": "In Progress" }
+      ]
+    }
+  },
+  {
+    "name": "Riya Desai",
+    "email": "riya@effihr.mock",
+    "role": "Frontend Developer",
+    "department": "Engineering",
+    "employee_id": "EMP-002",
+    "manager": "priya@effihr.mock",
+    "hire_date": "2023-07-01",
+    "grade": "L3",
+    "location": "Hyderabad",
+    "hrms": {
+      "current_cycle_goal_completion_pct": 42,
+      "manager_draft_rating": 2,
+      "self_rating": 3,
+      "past_cycles": [
+        { "cycle": "Q4 2024", "final_rating": 4, "percentile": 80 },
+        { "cycle": "Q3 2024", "final_rating": 3, "percentile": 65 }
+      ],
+      "attendance_pct": 89.5,
+      "unplanned_leaves": 6,
+      "goals": [
+        { "id": "G-01", "title": "Launch Redesigned Sprint Board UI", "weight": 50, "completion": 35, "status": "At Risk" },
+        { "id": "G-02", "title": "Reduce frontend bundle size by 20%", "weight": 30, "completion": 60, "status": "In Progress" },
+        { "id": "G-03", "title": "Write 10 E2E Playwright tests", "weight": 20, "completion": 40, "status": "At Risk" }
+      ]
+    }
+  },
+  {
+    "name": "Arjun Kumar",
+    "email": "arjun@effihr.mock",
+    "role": "Backend Engineer",
+    "department": "Engineering",
+    "employee_id": "EMP-003",
+    "manager": "priya@effihr.mock",
+    "hire_date": "2021-11-20",
+    "grade": "L4",
+    "location": "Pune",
+    "hrms": {
+      "current_cycle_goal_completion_pct": 78,
+      "manager_draft_rating": 4,
+      "self_rating": 4,
+      "past_cycles": [
+        { "cycle": "Q4 2024", "final_rating": 4, "percentile": 75 },
+        { "cycle": "Q3 2024", "final_rating": 3, "percentile": 60 },
+        { "cycle": "Q2 2024", "final_rating": 4, "percentile": 72 }
+      ],
+      "attendance_pct": 96.0,
+      "unplanned_leaves": 2,
+      "goals": [
+        { "id": "G-01", "title": "Implement GraphQL Gateway for microservices", "weight": 50, "completion": 80, "status": "In Progress" },
+        { "id": "G-02", "title": "Achieve 85% unit test coverage", "weight": 30, "completion": 78, "status": "In Progress" },
+        { "id": "G-03", "title": "Reduce API p95 latency to < 200ms", "weight": 20, "completion": 75, "status": "In Progress" }
+      ]
+    }
+  },
+  {
+    "name": "Priya Singh",
+    "email": "priya@effihr.mock",
+    "role": "DevOps Engineer",
+    "department": "Engineering",
+    "employee_id": "EMP-004",
+    "manager": "vp-eng@effihr.mock",
+    "hire_date": "2020-05-10",
+    "grade": "L6",
+    "location": "Mumbai",
+    "hrms": {
+      "current_cycle_goal_completion_pct": 95,
+      "manager_draft_rating": 5,
+      "self_rating": 5,
+      "past_cycles": [
+        { "cycle": "Q4 2024", "final_rating": 5, "percentile": 97 },
+        { "cycle": "Q3 2024", "final_rating": 4, "percentile": 90 },
+        { "cycle": "Q2 2024", "final_rating": 5, "percentile": 95 }
+      ],
+      "attendance_pct": 99.1,
+      "unplanned_leaves": 0,
+      "goals": [
+        { "id": "G-01", "title": "Achieve 99.95% uptime across all services", "weight": 40, "completion": 100, "status": "Completed" },
+        { "id": "G-02", "title": "Migrate CI pipelines to GitHub Actions", "weight": 35, "completion": 90, "status": "In Progress" },
+        { "id": "G-03", "title": "Implement zero-downtime blue/green deployment", "weight": 25, "completion": 95, "status": "Completed" }
+      ]
+    }
+  }
+]
